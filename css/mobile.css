@@ -1,0 +1,14 @@
+.container-image {
+    display: none;
+}
+
+body {
+    grid-template-columns: 1fr;
+}
+
+form {
+    background-color: transparent;
+    padding: 0 1rem;
+    height: 70%;
+    width: 100%;
+}

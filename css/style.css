@@ -1,0 +1,214 @@
+:root {
+    /* Colors */
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+    --border-color: #868686;
+    --button-text-color: #473404;
+
+    /* Fonts */
+    --font-form-primary: "Poppins", sans-serif;
+    --font-form-second: "Roboto", sans-serif;
+
+    font-size: 62.5%;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .container-image {
+    background: url(../assets/images/side-image-2x.jpg);
+    background-size: cover;
+  }
+
+  #logo {
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+  }
+
+  .container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+  }
+
+  form {
+    background-color: var(--form-background);
+    padding:  5rem 15rem;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    font-family: var(--font-form-primary);
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: var(--text-title);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: var(--font-form-second);
+    font-weight: 500;
+    color: var(--text-base);
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  fieldset {
+    border: none;
+    color: var(--text-base);
+  }
+
+  fieldset label {
+    font-family: var(--font-form-primary);
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  div.input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    border-radius: .4rem;
+    border: .1rem solid var(--border-color);
+    margin-bottom: 1.5rem;
+  }
+
+  div.input:focus-within{
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+  div.input input {
+    padding: .5rem;
+    width: 80%;
+    background-color: transparent;
+    font-family: var(--font-form-second);
+    color: var(--border-color);
+    font-weight: 400;
+    outline: none;
+    border: none;
+  }
+
+  div.input img {
+    margin: 0 .5rem;
+  }
+
+  div.input .focus {
+    display: none;
+  }
+
+  div.input:focus-within .focus{
+    display: initial;
+  }
+
+  div.input:focus-within .nofocus{
+    display: none;
+  }
+
+  .reset-password {
+    position: relative;
+    padding: 1rem 0;
+  }
+
+  .check-container {
+    font-family: var(--font-form-second);
+    font-size: 1.4rem;
+    color: var(--border-color);
+    position: relative;
+    padding-left: 1.9rem;
+    cursor: pointer;
+  }
+
+  .check-container img {
+    position: absolute;
+    left: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    z-index: 1;
+    display: none;
+    border: none;
+  }
+
+  .check-container input {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+  }
+
+  .check {
+    left: 0;
+    height: 1.4rem;
+    width: 1.4rem;
+    border: .1rem solid var(--border-color);
+    position: absolute;
+    border-radius: .3rem;
+  }
+
+  .check-container input:checked ~ .check {
+    background-color: var(--primary-color);
+    border: none;
+  }
+
+  .check-container input:checked ~ img {
+    display: initial;
+  }
+
+  .reset-password .forget {
+    position: absolute;
+    right: 0;
+  }
+
+  .reset-password .forget a {
+    font-family: var(--font-form-primary);
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  form button {
+    width: 100%;
+    font-family: var(--font-form-primary);
+    color: var(--button-text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: .3rem;
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+  }
+
+  form p {
+    font-family: var(--font-form-primary);
+    font-size: 1.2rem;
+    padding: .8rem 0;
+    text-align: center;
+    color: var(--primary-color); 
+  }
+
+  form p > a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
